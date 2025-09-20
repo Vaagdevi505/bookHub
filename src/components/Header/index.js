@@ -2,6 +2,7 @@ import {Component} from 'react'
 import {Link, withRouter} from 'react-router-dom'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {AiFillCloseCircle} from 'react-icons/ai'
+import Cookies from 'js-cookie'
 
 import './index.css'
 
@@ -12,6 +13,12 @@ class Header extends Component {
 
   toggleMenu = () => {
     this.setState(prevState => ({isMenuOpen: !prevState.isMenuOpen}))
+  }
+
+  onClickLogout = () => {
+    const {history} = this.props
+    Cookies.remove('jwt_token')
+    history.replace('/login')
   }
 
   render() {
@@ -45,7 +52,11 @@ class Header extends Component {
                 </Link>
               </li>
             </ul>
-            <button type="button" className="logout-button-desktop">
+            <button
+              type="button"
+              className="logout-button-desktop"
+              onClick={this.onClickLogout}
+            >
               Logout
             </button>
             <button
@@ -79,7 +90,11 @@ class Header extends Component {
                 </Link>
               </li>
             </ul>
-            <button type="button" className="logout-button-mobile">
+            <button
+              type="button"
+              className="logout-button-mobile"
+              onClick={this.onClickLogout}
+            >
               Logout
             </button>
             <button

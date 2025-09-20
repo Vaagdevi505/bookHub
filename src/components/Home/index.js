@@ -78,6 +78,11 @@ class Home extends Component {
     }
   }
 
+  onClickFindBooks = () => {
+    const {history} = this.props
+    history.replace('/shelf')
+  }
+
   render() {
     return (
       <>
@@ -96,7 +101,11 @@ class Home extends Component {
             <div className="top-rated-books-container">
               <div className="top-rated-header">
                 <h2 className="top-rated-heading">Top Rated Books</h2>
-                <button type="button" className="find-books-btn-desktop">
+                <button
+                  type="button"
+                  className="find-books-btn-desktop"
+                  onClick={this.onClickFindBooks}
+                >
                   Find Books
                 </button>
               </div>
