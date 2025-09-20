@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import Header from '../Header'
 import Footer from '../Footer'
@@ -78,11 +79,6 @@ class Home extends Component {
     }
   }
 
-  onClickFindBooks = () => {
-    const {history} = this.props
-    history.replace('/shelf')
-  }
-
   render() {
     return (
       <>
@@ -95,21 +91,20 @@ class Home extends Component {
               enjoyed in the past, and we will give you surprisingly insightful
               recommendations.
             </p>
-            <button type="button" className="find-books-btn-mobile">
-              Find Books
-            </button>
+            <Link to="/shelf" className="find-books-link">
+              <button type="button" className="find-books-btn-mobile">
+                Find Books
+              </button>
+            </Link>
             <div className="top-rated-books-container">
               <div className="top-rated-header">
                 <h2 className="top-rated-heading">Top Rated Books</h2>
-                <button
-                  type="button"
-                  className="find-books-btn-desktop"
-                  onClick={this.onClickFindBooks}
-                >
-                  Find Books
-                </button>
+                <Link to="/shelf" className="find-books-link">
+                  <button type="button" className="find-books-btn-desktop">
+                    Find Books
+                  </button>
+                </Link>
               </div>
-
               <div className="slick-container">
                 {this.renderTopRatedBooks()}
               </div>
