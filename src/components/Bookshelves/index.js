@@ -112,7 +112,7 @@ class Bookshelves extends Component {
         <img
           src="https://res.cloudinary.com/du8lwvfjj/image/upload/v1758383294/not-result_usbnmo.svg"
           alt="no books"
-          className="no-results-image"
+          className="no books"
         />
         <p className="no-results-text">
           Your search for {searchText} did not find any matches.
