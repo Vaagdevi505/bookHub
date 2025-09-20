@@ -6,7 +6,7 @@ const FailureView = props => {
   return (
     <div className="failure-view-container">
       <img
-        src="https://res.cloudinary.com/du8lwvfjj/image/upload/v1758361620/failure-image_anb2xt.jpg"
+        src="https://res.cloudinary.com/du8lwvfjj/image/upload/v1758367344/failure-image_uptjvf.svg"
         alt="failure view"
         className="failure-view-image"
       />

@@ -36,6 +36,12 @@
   object-fit: cover;
 }
 
+@media screen and (max-width: 576px) {
+  .book-image {
+    max-width: 150px;
+  }
+}
+
 .book-title {
   font-family: 'Roboto';
   font-size: 16px;
@@ -50,10 +56,4 @@
   font-size: 14px;
   color: #64748b;
   text-align: center;
-}
-
-@media screen and (max-width: 576px) {
-  .book-image {
-    max-width: 150px;
-  }
 }

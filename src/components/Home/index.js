@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import {Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import Header from '../Header'
 import Footer from '../Footer'
@@ -91,19 +90,15 @@ class Home extends Component {
               enjoyed in the past, and we will give you surprisingly insightful
               recommendations.
             </p>
-            <Link to="/shelf">
-              <button type="button" className="find-books-btn-mobile">
-                Find Books
-              </button>
-            </Link>
+            <button type="button" className="find-books-btn-mobile">
+              Find Books
+            </button>
             <div className="top-rated-books-container">
               <div className="top-rated-header">
                 <h2 className="top-rated-heading">Top Rated Books</h2>
-                <Link to="/shelf">
-                  <button type="button" className="find-books-btn-desktop">
-                    Find Books
-                  </button>
-                </Link>
+                <button type="button" className="find-books-btn-desktop">
+                  Find Books
+                </button>
               </div>
 
               <div className="slick-container">
