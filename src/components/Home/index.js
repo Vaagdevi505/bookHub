@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import Header from '../Header'
 import Footer from '../Footer'
@@ -56,7 +57,6 @@ class Home extends Component {
 
   renderSuccessView = () => {
     const {topRatedBooks} = this.state
-    console.log(topRatedBooks)
     return <BooksCarousel books={topRatedBooks} />
   }
 
@@ -91,12 +91,19 @@ class Home extends Component {
               enjoyed in the past, and we will give you surprisingly insightful
               recommendations.
             </p>
+            <Link to="/shelf">
+              <button type="button" className="find-books-btn-mobile">
+                Find Books
+              </button>
+            </Link>
             <div className="top-rated-books-container">
               <div className="top-rated-header">
                 <h2 className="top-rated-heading">Top Rated Books</h2>
-                <button type="button" className="find-books-btn">
-                  Find Books
-                </button>
+                <Link to="/shelf">
+                  <button type="button" className="find-books-btn-desktop">
+                    Find Books
+                  </button>
+                </Link>
               </div>
 
               <div className="slick-container">
